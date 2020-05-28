@@ -9,6 +9,10 @@ birdVideo.play().then(e => {
     birdVideo.muted = true;
     birdVideo.play();
     block.style.cursor = "hand";
+    block.addEventListener("click", e => {
+        birdVideo.muted = false;
+        block.style.cursor = "";
+    });
 }).finally( () => {
     restartAnimation();
 });
@@ -16,11 +20,6 @@ birdVideo.play().then(e => {
 birdVideo.addEventListener("seeked", e => {
     // restart animation on loop to keep it in time
     restartAnimation();
-});
-
-block.addEventListener("click", e => {
-    birdVideo.muted = false;
-    block.style.cursor = "";
 });
 
 const restartAnimation = () => {
