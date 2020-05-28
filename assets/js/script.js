@@ -20,7 +20,7 @@ birdVideo.addEventListener("seeked", e => {
 
 block.addEventListener("click", e => {
     birdVideo.muted = false;
-    block.style.cursor = "unset";
+    block.style.cursor = "";
 });
 
 const restartAnimation = () => {
